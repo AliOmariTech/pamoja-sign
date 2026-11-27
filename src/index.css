@@ -1,0 +1,5 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{@apply bg-sand text-ink;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55}
+:focus-visible{outline:3px solid #f2b134;outline-offset:2px}
+.btn{@apply inline-flex items-center justify-center rounded-lg px-4 py-3 font-semibold min-h-[48px]}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
