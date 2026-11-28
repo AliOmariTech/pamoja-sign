@@ -83,7 +83,7 @@ function Home({ go }: { go: (p: Page) => void }) {
             <div className="aspect-video overflow-hidden rounded-lg bg-black">
               <iframe
                 className="h-full w-full"
-                src={`https://www.youtube-nocookie.com/embed/${l.video}`}
+                src={`https://www.youtube-nocookie.com/embed/${l.video}?start=${l.videoStart ?? 0}`}
                 title={l.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
@@ -91,8 +91,13 @@ function Home({ go }: { go: (p: Page) => void }) {
               />
             </div>
             <p className="text-xs text-gray-500">
-              Video by Action for Children with Disabilities (ACD). Plays online. Pamoja Sign does not own this video.
-            </p>
+  {l.video === 'OoxHyN5siBE'
+    ? 'Learning resource: KSL Library. External video, not created by Pamoja Sign. Signs still need review by Deaf KSL users in Kakuma.'
+    : 'Video by Action for Children with Disabilities (ACD). External educational resource, not created by Pamoja Sign.'}
+  {' '}Plays online.
+</p>
+
+           
           </>
         ) : (
           <Video src={l.video} />

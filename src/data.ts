@@ -26,6 +26,7 @@ export type Lesson = {
   practice: string;
   video?: string;
   videoType?: 'youtube' | 'mp4';
+videoStart?: number;
 }
 
 export type Module = { id: string; name: string; lessons: Lesson[] }
@@ -41,6 +42,31 @@ const mk = (code: string): Lesson[] => topics.map((t, i) => ({
 }))
 
 const kslLessons = mk('ksl')
+// Temporary external KSL learning videos.
+// These will later be replaced with locally recorded videos
+// developed with Deaf community members in Kakuma.
+
+kslLessons[0] = {
+  id: 'ksl-0',
+  title: 'KSL Alphabet (A-Z)',
+  explain: 'A temporary learning video from KSL Library. This content has not yet been verified by Deaf KSL users in Kakuma.',
+  objectives: ['Watch the alphabet demonstration and observe the hand signs.'],
+  practice: 'Follow the video and practise the alphabet.',
+  video: 'OoxHyN5siBE',
+  videoType: 'youtube',
+  videoStart: 33,
+}
+
+kslLessons[1] = {
+  id: 'ksl-1',
+  title: 'KSL Numbers',
+  explain: 'A temporary learning video from KSL Library. This content has not yet been verified by Deaf KSL users in Kakuma.',
+  objectives: ['Watch the number demonstration and observe the hand signs.'],
+  practice: 'Follow the video and practise the numbers.',
+  video: 'OoxHyN5siBE',
+  videoType: 'youtube',
+  videoStart: 150,
+}
 
 // Temporary educational videos from Action for Children with Disabilities (ACD).
 // These are external YouTube videos, not Pamoja Sign original content.

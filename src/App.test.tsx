@@ -27,8 +27,8 @@ it('saves favourites and restores them after reload', async () => {
 })
 it('tracks lesson completion', async () => {
   render(<App />); go('Learn Sign Language')
-  fireEvent.click(await screen.findByRole('button', { name: 'Alphabet' }))
-  expect(screen.getAllByRole('note').length).toBeGreaterThan(0)
+  fireEvent.click(await screen.findByRole('button', { name: 'KSL Alphabet (A-Z)' }))
+  expect(screen.getByTitle('KSL Alphabet (A-Z)')).toBeTruthy()
   fireEvent.click(screen.getByRole('button', { name: 'Mark as complete' }))
   await waitFor(async () => expect(await get('done')).toEqual(['ksl-0']))
   expect(screen.getByText('1 of 12 lessons completed')).toBeTruthy()
