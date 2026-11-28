@@ -32,3 +32,6 @@ Stored on the device only (IndexedDB): lesson progress, favourites, text-size se
 ## Status
 See the review notes delivered with this release. Untested here: real browsers, real phones, service-worker offline behaviour, PWA install, speech recognition.
 Planned (not built): admin dashboard, Academy editing, feedback form, camera sign recognition, Kiswahili speech, real sign content.
+
+
+Automatic deployment test: 28 November 2026.
